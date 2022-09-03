@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currency Converter</title>
+  <link rel="shortcut icon" href="img/currencies-icon-10.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <ul>
+    <div id="button"><a href="index.html">Currency Converter</a></div>
+    <div id="button"><a href="CurrencyChart/index.html">Currency Chart</a></div>
+  </ul>
+  <div class="exchangeWidget">
+    <div class="header">
+      <div class="indent-right"></div>
+      <b>Конвертор валют</b>
+    </div>
+    <div class="currency">
+      <div class="custom-select" id="curr-one">
+        <div class="custom-select__placeholder"></div>        
+        <div class="custom-select__list">
+          <div class="custom-select__option" data-value="EUR">
+            <div class="custom-select__option-icon">
+              <img src="https://cdn.privat24.ua/icons/file/EU.svg">
+            </div>
+            <div class="custom-select__option-name">EUR</div>
+            <div class="custom-select__option-symbol">€</div>
+          </div>
+          <div class="custom-select__option custom-select__option--select" data-value="USD">
+            <div class="custom-select__option-icon">
+              <img src="https://cdn.privat24.ua/icons/file/US.svg">
+            </div>
+            <div class="custom-select__option-name">USD</div>
+            <div class="custom-select__option-symbol">$</div>
+          </div>
+          <div class="custom-select__option" data-value="GBP">
+            <div class="custom-select__option-icon">
+              <img src="https://cdn.privat24.ua/icons/file/GB.svg">
+            </div>
+            <div class="custom-select__option-name">GBP</div>
+            <div class="custom-select__option-symbol">£</div>
+          </div>
+          <div class="custom-select__option  display-none" data-value="UAH">
+            <div class="custom-select__option-icon">
+              <img src="https://cdn.privat24.ua/icons/file/UA.svg" />
+            </div>
+            <div class="custom-select__option-name">UAH</div>
+            <div class="custom-select__option-symbol">₴</div>
+          </div>
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="number" id="amount-one" class="input-box" placeholder="200.00" />
+        <span class="input-border"></span>
+      </div>
+    </div>
+
+    <div class="swap-rate-container">
+      <button class="btn" id="swap">
+          <div class="btn-arrows">
+            <div style="display: flex;">
+              <svg
+                height="24px" width="24px" version="1.1"
+                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+                  <path d="M0 0h24v24H0z"></path>
+                  <path
+                    d="M6.99 11L3 15l3.99 4v-3H14v-2H6.99v-3zM21 9l-3.99-4v3H10v2h7.01v3L21 9z"
+                    fill="#000"
+                    fill-rule="nonzero"></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </button>
+      <div class="rate" id="rate"></div>
+    </div>
+
+    <div class="currency">
+      <div class="custom-select" id="curr-two">
+        <div class="custom-select__placeholder"></div>
+        <div class="custom-select__list">
+          <div class="custom-select__option custom-select__option--select" data-value="UAH">
+            <div class="custom-select__option-icon">
+              <img src="https://cdn.privat24.ua/icons/file/UA.svg" />
+            </div>
+            <div class="custom-select__option-name">UAH</div>
+            <div class="custom-select__option-symbol">₴</div>
+          </div>
+          <div class="custom-select__option" data-value="GBP">
+            <div class="custom-select__option-icon">
+              <img src="https://cdn.privat24.ua/icons/file/GB.svg">
+            </div>
+            <div class="custom-select__option-name">GBP</div>
+            <div class="custom-select__option-symbol">£</div>
+          </div>
+          <div class="custom-select__option" data-value="EUR">
+            <div class="custom-select__option-icon">
+              <img src="https://cdn.privat24.ua/icons/file/EU.svg">
+            </div>
+            <div class="custom-select__option-name">EUR</div>
+            <div class="custom-select__option-symbol">€</div>
+          </div>
+          <div class="custom-select__option display-none" data-value="USD">
+            <div class="custom-select__option-icon">
+              <img src="https://cdn.privat24.ua/icons/file/US.svg">
+            </div>
+            <div class="custom-select__option-name">USD</div>
+            <div class="custom-select__option-symbol">$</div>
+          </div>
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="number" id="amount-two" placeholder="200.00" readonly/>
+        <span class="input-border"></span>
+      </div>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>
